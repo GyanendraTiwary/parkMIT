@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>ParkMIT</title>
+    <script>
+      setTimeout(function () {
+        location.reload();
+      }, 5000); // Refresh every 5 seconds
+    </script>
+  </head>
+  <body>
+    <div class="container mt-5" style="max-width: 700px">
+      <h1 class="mb-3"><span class="text-primary">MIT-WPU</span> Parking</h1>
+      <hr class="border border-primary">
+      {% for camera in cameras %}
+      <div class="card border border-4 border-primary my-2">
+        <div class="card-body">
+          <h5 class="card-title">{{ camera.location }}</h5>
+          <p class="card-text">
+            Total Capacity: {{ camera.capacity }} | Free Spaces: {{
+            camera.free_spaces }} | Percent Avalilable : {{
+            camera.percent_available}}%
+          </p>
+          <!-- -->
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

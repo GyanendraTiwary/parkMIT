@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Admin Home</title>
+</head>
+<body>
+    <div class="container mt-5" style="max-width: 700px;">
+        <h1>Admin Home</h1>
+        <hr class="border border-primary">
+        <a href="{{ url_for('add_camera') }}" class="btn btn-primary">Add Camera</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+        <br><br>
+        <h3>Locations</h3>
+        <hr class="border border-primary">
+        {% for camera in cameras %}
+        <div class="card border border-4 border-danger my-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ camera.location }}</h5>
+                <p class="card-text">Total Capacity: {{ camera.capacity }}</p>
+                <a href="{{ url_for('delete_camera', camera_id=loop.index0) }}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

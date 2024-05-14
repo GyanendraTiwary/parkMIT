@@ -1,0 +1,23 @@
+
+body {
+    margin: 20px; /* Add margin to the body */
+    
+}
+
+h1 {
+    margin-bottom: 20px;
+    padding: 5px;
+    border-bottom: 2px solid #007bff;
+}
+
+.container {
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 800px; /* Limit container width for better readability */
+}
+
+
+.card {
+    margin-bottom: 20px; /* Add space between cards */
+    border: 1px solid #007bff; /* Set border color to blue */
+    border-radius: 10px; /* Add rounded corners */
+}

@@ -1,0 +1,8 @@
+opencv-python
+torch
+numpy
+pandas
+requests
+pillow
+flask
+flask-bootstrap

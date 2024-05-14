@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Add Camera</title>
+</head>
+<body>
+    <div class="container mt-5" style="max-width: 700px;">
+        <h1>Add Camera</h1>
+        <hr class="border border-primary">
+        <form method="post">
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="ip">IP</label>
+                <input type="text" id="ip" name="ip" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="capacity">Capacity</label>
+                <input type="text" id="capacity" name="capacity" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+            <p><b>Please Select ROI and Press Enter</b></p>
+    
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
